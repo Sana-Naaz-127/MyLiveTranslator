@@ -1,9 +1,3 @@
-import argostranslate.translate
-
-# Install models if not installed
-if len(argostranslate.translate.get_installed_languages()) == 0:
-    import install_models
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from translator import translate_text
