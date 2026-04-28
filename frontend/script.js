@@ -1,8 +1,10 @@
 // ✅ Set this to your deployed backend URL in production
 // e.g. "https://your-app.onrender.com/translate"
 // Locally it falls back to localhost
-const API_URL = window.ENV_API_URL || "http://127.0.0.1:5000/translate";
-
+const API_URL =
+  window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+    ? "http://127.0.0.1:5000/translate"
+    : "https://mylivetranslator.onrender.com/translate";
 async function translateText() {
   const text = document.getElementById("inputText").value.trim();
   const from = document.getElementById("fromLang").value;
