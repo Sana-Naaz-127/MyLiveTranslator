@@ -1,3 +1,9 @@
+import argostranslate.translate
+
+# Install models if not installed
+if len(argostranslate.translate.get_installed_languages()) == 0:
+    import install_models
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from translator import translate_text
@@ -21,7 +27,6 @@ def translate():
     if not text:
         return jsonify({"error": "No text provided"}), 400
 
-    # Auto detect language
     if from_lang == "auto":
         try:
             from_lang = detect(text)
@@ -37,6 +42,3 @@ def translate():
 @app.route("/health")
 def health():
     return {"status": "ok"}
-
-if __name__ == "__main__":
-    app.run(debug=True)
