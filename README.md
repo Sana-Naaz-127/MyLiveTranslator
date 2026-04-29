@@ -43,10 +43,11 @@ A real-time language translation system that combines **Natural Language Process
 ### Deployment
 - Frontend: Netlify
 - Backend: Render
+  
 
 ### Author
-Sana Naaz
-B.Tech CSE | AI & NLP Enthusiast
+-Sana Naaz
+-B.Tech CSE | AI & NLP Enthusiast
 
 
 
