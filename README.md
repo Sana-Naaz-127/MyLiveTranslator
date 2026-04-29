@@ -46,8 +46,9 @@ A real-time language translation system that combines **Natural Language Process
   
 
 ### Author
--Sana Naaz
--B.Tech CSE | AI & NLP Enthusiast
+Sana Naaz
+
+B.Tech CSE | AI & NLP Enthusiast
 
 
 
